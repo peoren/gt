@@ -1,16 +1,21 @@
 <template>
   <div id="app">
-    <comhead/>
+    <top v-if='show'/>
     <router-link to="/"></router-link>
     <router-view/>
   </div>
 </template>
 
 <script>
-import comhead from '@/components/header/header.vue'
+import top from '@/components/header/header.vue'
 export default {
   components:{
-    comhead
+    top
+  },
+  data() {
+    return {
+      show:true //如果不需要头部和底部 将该值变成false
+    }
   }
 }
 </script>
