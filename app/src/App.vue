@@ -1,11 +1,7 @@
 <template>
   <div id="app">
-<<<<<<< HEAD
-    <router-link to="/personalcenter">个人中心</router-link>
-=======
     <comhead/>
     <router-link to="/"></router-link>
->>>>>>> fb91f956c20b0bdb863ca69216f884b63ad89f6c
     <router-view/>
   </div>
 </template>
