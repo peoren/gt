@@ -13,7 +13,8 @@ export default {
   methods: {
     cd() {
       this.$router.push('/about')
-    }
+    },
+   
   }
 };
 </script>
