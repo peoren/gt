@@ -12,8 +12,8 @@ export default {
   name: 'home',
   methods: {
     cd() {
-      this.$router.push('/about')
-    }
-  }
+      this.$router.push('/about');
+    },
+  },
 };
 </script>

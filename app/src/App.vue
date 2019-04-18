@@ -1,9 +1,20 @@
 <template>
   <div id="app">
+    <comhead/>
     <router-link to="/"></router-link>
     <router-view/>
   </div>
 </template>
+
+<script>
+import comhead from '@/components/header/header.vue'
+export default {
+  components:{
+    comhead
+  }
+}
+</script>
+
 
 <style>
 /* 这是测试字段 */
