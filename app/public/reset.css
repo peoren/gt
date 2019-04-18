@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.clear::after {
+    display: table;
+    content: '';
+    clear: both;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
