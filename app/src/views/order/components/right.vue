@@ -4,15 +4,17 @@
 </template>
 <script>
 export default {
-    name:right,
+    name:'right',
     component:{
     }
 }
 </script>
 <style scoped>
 .right{
-    width: 29%;
+    width: 24%;
     float: right;
+    height: 1000px;
+    background-color: aqua;
 }
 </style>
 
