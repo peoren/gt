@@ -1,57 +1,57 @@
 <template>
-       <div class="child-msg-wrap">
-      <div class="neworder">
-        <div class="orderhead">
-          <ul>
-            <li>订单号</li>
-            <li>金额</li>
-            <li>下单时间</li>
-            <li>订单状态</li>
-            <li>支付方式</li>
-            <li>操作</li>
-          </ul>
-        </div>
-        <div class="orderlist">
-          <ul v-for="(orderone,index) in commentlist" :key="index">
-            <!-- 订单号 和 数量-->
-            <li>
-              <div>
-                + 订单号:
-                <span>{{orderone.o_id}}</span>
-              </div>
-              <div>
-                <span>{{orderone.o_count}}</span>
-                件商品
-              </div>
-            </li>
-            <!-- 订单金额 -->
-            <li>
-              <span>{{orderone.o_paytotal}}</span>
-            </li>
-            <!-- 创建订单时间 -->
-            <li>
-              <span>{{orderone.o_starttime}}</span>
-            </li>
-            <!-- 订单状态 -->
-            <li>
-              <span>订单完成</span>
-            </li>
-            <!-- 支付方式 -->
-            <li>支付宝</li>
-            <!-- 操作 -->
-            <li>
-              <router-link to="/person_center/writecomment">去评论</router-link>
-            </li>
-          </ul>
-        </div>
+  <div class="child-msg-wrap">
+    <div class="neworder">
+      <div class="orderhead">
+        <ul>
+          <li>订单号</li>
+          <li>金额</li>
+          <li>下单时间</li>
+          <li>订单状态</li>
+          <li>支付方式</li>
+          <li>操作</li>
+        </ul>
+      </div>
+      <div class="orderlist">
+        <ul v-for="(orderone,index) in commentlist" :key="index">
+          <!-- 订单号 和 数量-->
+          <li>
+            <div>
+              + 订单号:
+              <span>{{orderone.o_id}}</span>
+            </div>
+            <div>
+              <span>{{orderone.o_count}}</span>
+              件商品
+            </div>
+          </li>
+          <!-- 订单金额 -->
+          <li>
+            <span>{{orderone.o_paytotal}}</span>
+          </li>
+          <!-- 创建订单时间 -->
+          <li>
+            <span>{{orderone.o_starttime}}</span>
+          </li>
+          <!-- 订单状态 -->
+          <li>
+            <span>订单完成</span>
+          </li>
+          <!-- 支付方式 -->
+          <li>支付宝</li>
+          <!-- 操作 -->
+          <li>
+            <router-link to="/person_center/writecomment">去评论</router-link>
+          </li>
+        </ul>
       </div>
     </div>
+  </div>
 </template>
 <script>
 export default {
-    name:'gocomment',
-    props:['commentlist']
-}
+  name: "gocomment",
+  props: ["commentlist"]
+};
 </script>
 
 <style scoped>

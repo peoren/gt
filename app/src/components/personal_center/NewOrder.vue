@@ -52,7 +52,7 @@
           <a href="#">
             <span>去支付</span>
           </a>
-          <a href="#">查看订单</a>
+          <router-link to='/orderdetail'>查看订单</router-link>
           <a href="#">取消订单</a>
         </li>
       </ul>
