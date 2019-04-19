@@ -6,7 +6,7 @@
             <span>数量</span>
             <span>总计</span>
         </div>
-        
+
     </div>
 </template>
 <script>
@@ -37,3 +37,4 @@ span:nth-of-type(1){
     width: 58%;
 }
 </style>
+

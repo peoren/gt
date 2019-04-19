@@ -5,7 +5,9 @@ const state = {
   num:[1,2,3],
   logined: '',
   showLoading:false,
-  prevUrl:'/'
+  prevUrl:'/',
+  allprice:'',
+  integral:''
 }
 
  
