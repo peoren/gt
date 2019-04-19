@@ -6,3 +6,4 @@ app/src/views/home/Home.vue
 app/src/views/home/Home.vue
 app/src/App.vue
 app/src/main.js
+app/src/router.js
