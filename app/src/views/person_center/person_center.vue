@@ -13,7 +13,7 @@
           <router-link to="/person_center/">我的订单</router-link>
         </li>
         <li>
-          <router-link to="/person_center/a">积分信息</router-link>
+          <router-link to="/person_center/integral">积分信息</router-link>
         </li>
         <li>
           <router-link to="/person_center/comment">我的评论</router-link>
@@ -21,16 +21,16 @@
       </ul>
       <ul class="user-msg-footer">
         <li>
-          <router-link to="/person_center/b">我的心愿单</router-link>
+          <router-link to="/person_center/wishlist">我的心愿单</router-link>
         </li>
         <li>
-          <router-link to="/person_center/c">个人信息</router-link>
+          <router-link to="/person_center/userinfo">个人信息</router-link>
         </li>
         <li>
-          <router-link to="/person_center/d">收货地址</router-link>
+          <router-link to="/person_center/address">收货地址</router-link>
         </li>
         <li>
-          <router-link to="/person_center/e">安全中心</router-link>
+          <router-link to="/person_center/changepassword">安全中心</router-link>
         </li>
       </ul>
     </div>
@@ -62,6 +62,7 @@ export default {
   min-width: 1024px;
   max-width: 1440px;
   margin: 50px auto;
+  height: 100%;
 }
 .personal-page-wrap::before,
 .personal-page-wrap::after {
@@ -74,12 +75,13 @@ export default {
 .personal-page-wrap .component-wrap {
   float: right;
   width: 74%;
- padding-top: 75px;
+  padding-top: 75px;
 }
 .personal-page-wrap .left-nav {
   width: 25%;
   float: left;
   background: #f5f5f5;
+  height: 100%;
 }
 .left-nav ul {
   width: 200px;

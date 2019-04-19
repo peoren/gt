@@ -19,6 +19,31 @@ export default [
           name: 'writecomment',
           component: () => import('@/components/personal_center/WriteComment.vue'),
         },
+        {
+          path: 'address',
+          name: 'address',
+          component: () => import('@/components/personal_center/Address.vue'),
+        },
+        {
+          path: 'changepassword',
+          name: 'changepassword',
+          component: () => import('@/components/personal_center/Changepassword.vue'),
+        },
+        {
+          path: 'wishlist',
+          name: 'wishlist',
+          component: () => import('@/components/personal_center/Wishlist.vue'),
+        },
+        {
+          path: 'integral',
+          name: 'integral',
+          component: () => import('@/components/personal_center/Integral.vue'),
+        },
+        {
+          path: 'userinfo',
+          name: 'userinfo',
+          component: () => import('@/components/personal_center/Userinfo.vue'),
+        },
       ]
     },
    
