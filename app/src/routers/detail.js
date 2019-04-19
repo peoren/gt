@@ -1,12 +1,12 @@
 export default [
     {
-      path: '/a',
-      name: 'home',
-      component: () => import('../views/home/Home.vue'),
+      path: '/detail/:id',
+      name: 'detail',
+      component: () => import('../views/detail/Detail.vue'),
     },
-    {
-      path: '/aa',
-      name: 'about',
-      component: () => import('../views/about/About.vue'),
-    },
+    // {
+    //   path: '/aa',
+    //   name: 'about',
+    //   component: () => import('../views/about/About.vue'),
+    // },
   ]
