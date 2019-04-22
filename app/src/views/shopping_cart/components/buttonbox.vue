@@ -1,19 +1,43 @@
 <template>
     <div class="buttonbox">
-        <p class="clearShoppingCart">
-            清空购物袋
+        <p class="clearShoppingCart"  @click="clearshopcart">
+            清空购物车
         </p>
-        <p class="backHome">
+        <router-link to='/a' class="backHome" tag='p'>
             继续购物
-        </p>
-        <p class="settleAccounts">
+        </router-link>
+        <router-link to='/toorder' class="settleAccounts" tag='p'>
             下单结算
-        </p>
+        </router-link>
+        <clearmodal v-show="modal_flag" :modal_state.sync='modal_state' />  
+        
     </div>
 </template>
 <script>
+import clearmodal from '@/views/shopping_cart/components/clearmodal.vue'
 export default {
-    
+    components:{
+        clearmodal
+    },
+    data:function(){
+        return {
+            modal_flag:false,//打开模态框
+            modal_state:false//模态框的状态值
+        }
+    },
+    methods:{
+
+        clearshopcart(){
+            this.modal_flag=!this.modal_flag;
+            console.log('判断了');
+            if(this.modal_state){
+                router.push('/clear_shopping_cart')
+            }else{
+                
+            }
+            
+        }
+    }
 }
 </script>
 <style scoped>

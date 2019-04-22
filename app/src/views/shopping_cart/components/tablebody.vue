@@ -21,9 +21,9 @@
         </div>
         
         <p class="allprice">
-            总金额:￥{{this.allprice}}
+            总金额:￥{{allprice}}
         </p>
-        
+
     </div>
 </template>
 <script>
@@ -32,14 +32,14 @@ import selectorlist from '@/views/shopping_cart/components/selectorlist.vue'
 export default {
     name:'tablebody',
     components:{
-        selectorlist
+        selectorlist,
+        
     },
     data:function(){
         return {
             imgsrc:'',
-            // numflag:true,//商品数量下拉flag
             goodsdata:'',
-            allprice:0
+           
         }
     },
     methods:{
@@ -79,10 +79,7 @@ export default {
             ]
             localdata=JSON.stringify(localdata);
             localStorage.setItem('showpagedata',localdata)
-            this.goodsdata=JSON.parse(localStorage.getItem('showpagedata'));//存入goodsdata
-            // for(let i in this.goodsdata){
-            //     this.$set(this.goodsdata[i],'numflag',true);
-            // }   
+            this.goodsdata=JSON.parse(localStorage.getItem('showpagedata'));//存入goodsdata  
         },
         /**
          * 监听selectorlist传来index,和n，修改goodsdata对应的数量
@@ -91,29 +88,31 @@ export default {
          */
         changeGoodNum:function(n,index){           
             this.$set(this.goodsdata[index],'goodsnum',n)
-            this.getAllPrice();
         },
-        /**
-         * 计算总金额
-         * 遍历goodsdata计算总金额,
-         * 在story中加入总价格和积分
-         */
-        getAllPrice:function(){
-            let allprice=0
-            for( let i in this.goodsdata){
-                allprice+=this.goodsdata[i].goodsprice*this.goodsdata[i].goodsnum
-            }
-            this.allprice=allprice
-            //加入总价和积分
-            this.$store.state.allprice=allprice
-            this.$store.state.integral=150
-        },
+        
         // goodsRmove:function(index){
         //     this.goodsdata.splice(index,1)
         // }
         
     },
-    
+    computed:{
+        /**
+         * 计算总金额
+         * 遍历goodsdata计算总金额,
+         * 在story中加入总价格和积分
+         */
+        allprice(){
+            let allprice=0
+            for( let i in this.goodsdata){
+                allprice+=this.goodsdata[i].goodsprice*this.goodsdata[i].goodsnum
+            }
+            //加入总价和积分
+            this.$store.state.allprice=allprice
+            this.$store.state.integral=150
+            return allprice
+        },
+        
+    },
     created(){
         /**
          * 从后台得到的数据写入goodsdata
@@ -122,7 +121,7 @@ export default {
         /**
          * 计算总价
          */
-        this.getAllPrice()
+        // this.getAllPrice()
     }
 } 
 </script>
