@@ -40,7 +40,7 @@ export default {
   name: "ShowComment",
   data() {
     return {
-      url: require("@/assets/g.png"),
+      // url: require("@/assets/g.png"),
       start: 0,
       userInfo:'这家的商品真的很棒'
     };

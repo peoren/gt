@@ -9,23 +9,23 @@
           <li v-if="order[0].order_state == 0" class="colorgray">提交订单</li>
           <li v-else>提交订单</li>
           <li>
-            <img src="../assets/bigjiantou.png" alt>
+            <!-- <img src="../assets/bigjiantou.png" alt> -->
           </li>
           <li v-if="order[0].order_state == 1" class="colorgray">付款成功</li>
           <li v-else>付款成功</li>
           <li>
-            <img src="../assets/bigjiantou.png" alt>
+            <!-- <img src="../assets/bigjiantou.png" alt> -->
           </li>
           <li v-if="order[0].order_state == 5" class="colorgray">发货</li>
           <li v-else>发货</li>
           <li>
-            <img src="../assets/bigjiantou.png" alt>
+            <!-- <img src="../assets/bigjiantou.png" alt> -->
           </li>
           <li v-if="order[0].order_state == 3" class="colorgray">已完成</li>
           <li v-else>已完成</li>
         </ul>
       </div>
-      <!-- <div class="order-num">
+      <div class="order-num">
         <div>
           <span>{{order[0].goods_starttime}}</span>
           <span>订单创建成功！</span>
@@ -121,8 +121,8 @@
         <ul v-for="(ele,index) in order" :key="index">
           <li>
             <a href="#">
-              <!-- <img :src='ele.goods_src_new' alt> -->
-            <!-- </a>
+              <img :src='ele.goods_src_new' alt>
+            </a>
             <div>
               <div>{{ele.goods_Ename}}</div>
               <div>{{ele.goods_Cname}}</div>
@@ -172,9 +172,8 @@
         </div>
       </div>
     </div>
-  </div>--> 
-
-</template> 
+  </div>
+</template>
 
 <script>
 export default {
@@ -194,8 +193,8 @@ export default {
           order_receipt_yb: 610000,
           order_express: "快递",
           order_express_m: 23.44,
-          // goods_src: "dingdan.png",
-          // goods_src_new: "",
+          goods_src: "dingdan.png",
+          goods_src_new: "",
           goods_Ename: "Hydro-Softening Lotion",
           goods_Cname: "光采保湿露（湿润型）",
           goods_size: "170ml",
@@ -215,8 +214,8 @@ export default {
           order_receipt_yb: 610000,
           order_express: "快递",
           order_express_m: 230.44,
-          // goods_src: "dingdan.png",
-          // goods_src_new: "",
+          goods_src: "dingdan.png",
+          goods_src_new: "",
           goods_Ename: "Hydro-Softening Lotion",
           goods_Cname: "光采保湿露（湿润型）",
           goods_size: "170ml",
@@ -236,8 +235,8 @@ export default {
           order_receipt_yb: 610000,
           order_express: "快递",
           order_express_m: 230.44,
-          // goods_src: "dingdan.png",
-          // goods_src_new: "",
+          goods_src: "dingdan.png",
+          goods_src_new: "",
           goods_Ename: "Hydro-Softening Lotion",
           goods_Cname: "光采保湿露（湿润型）",
           goods_size: "170ml",
@@ -249,10 +248,10 @@ export default {
     };
   },
   created() {
-    // for (let index = 0; index < this.order.length; index++) {
-    //   this.order[index].goods_src_new = require("@/assets/" +
-    //     this.order[index].goods_src);
-    // }
+    for (let index = 0; index < this.order.length; index++) {
+      this.order[index].goods_src_new = require("@/assets/" +
+        this.order[index].goods_src);
+    }
   }
 };
 </script>
